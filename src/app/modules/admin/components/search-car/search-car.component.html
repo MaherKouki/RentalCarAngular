@@ -1,0 +1,132 @@
+<div class="inner-content" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="Loading cars...">
+        <div class="dashboard-filter" style="width: 100%; max-width: 800px;">
+            <div 
+                class="filter-grid" 
+                [formGroup]="searchCarForm" 
+                style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                <div 
+                    class="filter-select-dropdown filter-fields-width" 
+                    style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; font-size: 18px;">
+                    
+                    <!-- Brand Dropdown -->
+                    <nz-form-item>
+                        <nz-form-label nzFor="brand">Brand</nz-form-label>
+                        <nz-form-control nzErrorTip="Please select a brand.">
+                            <nz-select
+                                nzShowSearch
+                                nzAllowClear
+                                nzPlaceHolder="Select a Brand"
+                                formControlName="brand"
+                                [nzDisabled]="!listOfBrands || listOfBrands.length === 0">
+                                <nz-option 
+                                    *ngFor="let brand of listOfBrands"
+                                    [nzLabel]="brand"
+                                    [nzValue]="brand">
+                                </nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Type Dropdown -->
+                    <nz-form-item>
+                        <nz-form-label nzFor="type">Type</nz-form-label>
+                        <nz-form-control nzErrorTip="Please select a type.">
+                            <nz-select
+                                nzShowSearch
+                                nzAllowClear
+                                nzPlaceHolder="Select a Type"
+                                formControlName="type"
+                                [nzDisabled]="!listOfType || listOfType.length === 0">
+                                <nz-option 
+                                    *ngFor="let type of listOfType"
+                                    [nzLabel]="type"
+                                    [nzValue]="type">
+                                </nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Color Dropdown -->
+                    <nz-form-item>
+                        <nz-form-label nzFor="color">Color</nz-form-label>
+                        <nz-form-control nzErrorTip="Please select a color.">
+                            <nz-select
+                                nzShowSearch
+                                nzAllowClear
+                                nzPlaceHolder="Select a Color"
+                                formControlName="color"
+                                [nzDisabled]="!listOfColor || listOfColor.length === 0">
+                                <nz-option 
+                                    *ngFor="let color of listOfColor"
+                                    [nzLabel]="color"
+                                    [nzValue]="color">
+                                </nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+
+                    <!-- Transmission Dropdown -->
+                    <nz-form-item>
+                        <nz-form-label nzFor="transmission">Transmission</nz-form-label>
+                        <nz-form-control nzErrorTip="Please select a transmission type.">
+                            <nz-select
+                                nzShowSearch
+                                nzAllowClear
+                                nzPlaceHolder="Select Transmission"
+                                formControlName="transmission"
+                                [nzDisabled]="!listOfTransmission || listOfTransmission.length === 0">
+                                <nz-option 
+                                    *ngFor="let transmission of listOfTransmission"
+                                    [nzLabel]="transmission"
+                                    [nzValue]="transmission">
+                                </nz-option>
+                            </nz-select>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+
+                <!-- Search Button -->
+                <div class="filter-select-dropdown filter-fields-width" style="margin-top: 20px; text-align: center;">
+                    <button
+                        class="filterBtn"
+                        nzType="primary"
+                        nzSize="large"
+                        nz-button
+                        (click)="searchCar()">
+                        Search Car
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nz-spin>
+</div>
+
+
+<div style="background-color: #F8F8F8;" >
+    <div class="child" style="padding-bottom: 30px;" *ngFor="let car of cars">
+        <div nz-row>
+            <div nz-col nzSpan="8">
+                <img class="profile" style="height:130px; width:220px; border-radius: 10px;" [src]="car.processedImg"
+                    alt="profile">
+            </div>
+            <div nz-col nzSpan="16">
+                <h2 style="cursor: pointer; color:#108ee9;">
+                    {{car.brand}} - {{car.name}}</h2>
+                <p>{{car.descirption}}</p>
+                <hr>
+                <h5>Price : <b>{{car.price}}</b> - Color : <b>{{car.color}}</b> - Transmission : 
+                    <b>{{car.transmission}}</b> - Type : <b>{{car.type}}</b> - Year : <b>{{car.year | date: 'yyyy' }}</b>  
+                </h5>
+                <hr>
+
+            </div>
+        </div>
+
+
+
+        
+
+    </div>
+
+</div>

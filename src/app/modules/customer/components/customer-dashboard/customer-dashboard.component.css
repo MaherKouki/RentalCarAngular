@@ -1,0 +1,181 @@
+/*
+
+.child{
+    padding: 20px;
+    width: 780px;
+    background-color: white;
+    background: white;
+    box-shadow: 1px 1px 15px -7px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    padding:30px;
+    width: 780px;
+    background-color: white;
+    background: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+i {
+    font-size:20px;
+    font-weight: bold;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+tr {
+    padding: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px
+}
+
+p{
+    margin-bottom: 0em;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2:hover {
+    text-decoration-line: underline;
+}
+
+.pagination {
+    width: 780px;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 80px;
+    margin-top: 20px;
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+button[nz-button][nzType="primary"] {
+    background-color: #108ee9;
+    border: none;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button[nz-button][nzType="primary"]:hover {
+    background-color: #0d7bc9;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button[nz-button][nzType="primary"]:active {
+    background-color: #0b6ea7;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+    */
+
+    .child {
+        padding: 20px;
+        width: 720px;
+        background-color: white;
+        box-shadow: 1px 1px 15px -7px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+    
+    .profile {
+        border-radius: 10px;
+        height: 130px;
+        width: 200px;
+    }
+    
+    h2:hover {
+        text-decoration-line: underline;
+    }
+    
+    hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /* Space between text and photo */
+    .nz-col {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .nz-col + .nz-col {
+        padding-left: 20px; /* Adds space between the image and the text */
+    }
+
+    button[nz-button][nzType="primary"] {
+        background-color: #0d3d5f;
+        border: none;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+    
+    button[nz-button][nzType="primary"]:hover {
+        background-color: #0d7bc9;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px); /* Slight lift effect */
+    }
+    
+    button[nz-button][nzType="primary"]:active {
+        background-color: #0b6ea7;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        transform: translateY(1px); /* Button press effect */
+    }
+    
+    button[nz-button][nzType="primary"] i {
+        margin-right: 5px; /* Add some space between the icon and text (if any icon is added) */
+    }
+    
+    button[nz-button][nzType="primary"]:disabled {
+        background-color: #e0e0e0;
+        color: #a0a0a0;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+    
+    
+    
+

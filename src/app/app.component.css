@@ -1,0 +1,98 @@
+/*.custom-navbar {
+    background-color: #003973;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+    .navbar-title{
+        >a {
+            color: white !important;
+            margin: left 10px;
+            font-size:18 px;
+            font-weight: bolder;
+    }
+
+
+    .nav-links{
+        display:flex;
+        align-items: center;
+        a {
+            color: white;
+            margin-left: 15px;
+
+        }
+
+    }
+}*/
+
+
+
+/* Navbar */
+.custom-navbar {
+    background-color: #1a2b47; /* Couleur moderne pour la barre de navigation */
+    /*background-color: #003973;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
+}
+
+/* Titre de la navbar */
+.navbar-title {
+    >a {
+        color: #fff; /* Texte blanc pour le titre */
+        margin-left: 10px;
+        font-size: 20px; /* Taille de police légèrement plus grande */
+        font-weight: bolder;
+        text-transform: uppercase; /* Texte en majuscules pour un style plus net */
+        letter-spacing: 1px; /* Espacement entre les lettres */
+        transition: color 0.3s ease; /* Transition douce au survol */
+    }
+
+    >a:hover {
+        color: #00bcd4; /* Changement de couleur du titre au survol */
+    }
+}
+
+/* Liens de navigation */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #fff; /* Couleur de texte blanche */
+    margin-left: 15px;
+    font-size: 16px; /* Taille de police confortable */
+    padding: 8px 15px; /* Espacement autour du texte */
+    border-radius: 4px; /* Bordures arrondies pour un effet plus doux */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour le survol */
+}
+
+/* Effet au survol des liens */
+.nav-links a:hover {
+    background-color: #00bcd4; /* Fond bleu clair au survol */
+    color: #fff; /* Texte blanc au survol */
+    cursor: pointer; /* Changer le curseur pour indiquer un lien cliquable */
+}
+
+/* Liens dans la navbar quand l'utilisateur est connecté */
+.nav-links a.active {
+    color: #00bcd4; /* Couleur des liens actifs */
+    font-weight: bold;
+}
+
+/* Liens de la navbar avec effet de soulignement au survol */
+.nav-links a {
+    text-decoration: none; /* Suppression de la sous-ligne par défaut */
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Sous-ligner les liens au survol */
+}
+
+
+

@@ -1,0 +1,36 @@
+<div style="background-color: #f8f8f8; min-height: 91vh;">
+    <div style="padding-top: 10px"></div>
+
+    <div style="margin-top: 10px;" class="child" *ngFor="let car of cars">
+        <div nz-row nzJustify="space-between" nzAlign="top" style="display: flex; align-items: center;">
+            <!-- Left side: Image -->
+            <div nz-col nzSpan="8" style="display: flex; justify-content: center;">
+                <img class="profile" 
+                     style="height:150px; width:220px; border-radius: 20px;" 
+                     [src]="car.processedImg" alt="profile">
+            </div>
+            
+            <!-- Right side: Car details -->
+            <div nz-col nzSpan="16" style="padding-left: 20px;"> <!-- Added padding-left to create space -->
+                <h2 style="cursor:pointer; color:#108ee9;">
+                    {{car.brand}} - {{car.name}}
+                </h2>
+                <p>{{car.description}}</p>
+
+                <hr>
+                <h5> Price: <b>{{car.price}}</b> - Color: <b>{{car.color}}</b> - Transmission:
+                    <b>{{car.transmission}}</b> - Type: <b>{{car.type}}</b> - Year: 
+                    <b>{{car.year | date:'yyyy'}}</b>
+                </h5>
+                <hr>
+                <div class="button-container">
+                    <button style="margin-left: 10px;" nzSize="small" 
+                            nz-button nzType="primary" 
+                            routerLink="/customer/book/{{car.id}}">
+                        Book
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
