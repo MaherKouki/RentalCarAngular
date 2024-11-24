@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder,FormGroup } from '@angular/forms';
-import { AdminService } from '../../services/admin.service';
+import { CustomerService } from '../../services/customer.service';
 import { NzMessageComponent, NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
@@ -9,6 +9,8 @@ import { NzMessageComponent, NzMessageService } from 'ng-zorro-antd/message';
   styleUrl: './search-car.component.css'
 })
 export class SearchCarComponent {
+
+
 
   searchCarForm!:FormGroup;
   listOfOption: Array<{label:string ; value:string }>=[];
@@ -21,7 +23,7 @@ export class SearchCarComponent {
 
   constructor(
     private fb: FormBuilder,
-    private service: AdminService,
+    private service: CustomerService,
     private message: NzMessageService
   ) {
     this.searchCarForm = this.fb.group({
@@ -54,6 +56,5 @@ export class SearchCarComponent {
       },
     });
   }
-  
-  
+
 }
